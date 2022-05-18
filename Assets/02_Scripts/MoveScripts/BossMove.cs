@@ -10,21 +10,26 @@ public class BossMove : MonoBehaviour
 
     [SerializeField] private float _MoveSpeed = 6f;
     [SerializeField] private float _MoveLength = 3f;
+
+    [SerializeField] private float _MoveDelayTime;
+    
     public float time;
 
-    private void Start()
-    {
-        
-    }
     private void Update()
     {
         LimitMove();
     }
 
+    private void Start()
+    {
+        
+    }
+
+    
+
     private void LimitMove()
     {
         time = Mathf.Sin(Time.time * _MoveSpeed);
         transform.position = new Vector2(transform.position.x, time * _MoveLength);
-
     }
 }
