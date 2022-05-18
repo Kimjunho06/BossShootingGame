@@ -5,8 +5,8 @@ using DG.Tweening;
 
 public class PlayerMove : MonoBehaviour
 {
-    [SerializeField] private float _moveSpeed; // ¾ÆÁ÷ ¾È ¾¸
-    [SerializeField] private float _moveTrmDelaySecond = 2f;
+    [SerializeField] private float _moveSpeed = 5f; // ¾ÆÁ÷ ¾È ¾¸
+    [SerializeField] private float _moveTrmDelaySecond;
 
     private Sequence _moveSequence;
     
@@ -25,17 +25,18 @@ public class PlayerMove : MonoBehaviour
     }
 
     
-
     IEnumerator MoveTransDelay()
     {
-        _randomTransX = Random.Range(-8.5f, 2f);
-        _randomTransY = Random.Range(-5f, 4.5f);
+        _randomTransX = Random.Range(-8.5f, 0f);
+        _randomTransY = Random.Range(-3f, 3.8f);
+        _moveTrmDelaySecond = Random.Range(1f, 2f);
         yield return new WaitForSecondsRealtime(_moveTrmDelaySecond);
         StartCoroutine("MoveTransDelay");
     }
 
     private void Move()
     {
-        transform.position = new Vector3(_randomTransX, _randomTransY);     
+        _moveSequence = DOTween.Sequence().SetAutoKill(false)
+            .Append(transform.DOMove(new Vector3(_randomTransX, _randomTransY, 0), 0.5f)).SetEase(Ease.InOutSine);
     }
 }
