@@ -5,6 +5,8 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     private float _randomFire;
+    
+
     public GameObject _bullet;
 
     private void Awake()
@@ -24,7 +26,15 @@ public class Bullet : MonoBehaviour
             _randomFire = Random.Range(0, 1f);
             Instantiate(_bullet, transform.position, Quaternion.identity);
             yield return new WaitForSeconds(_randomFire);
-
+        }
+    }
+    
+    IEnumerator DestroyDelay()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(2f);
+            Destroy(_bullet);
         }
     }
 }
