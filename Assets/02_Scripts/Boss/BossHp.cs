@@ -30,7 +30,7 @@ public class BossHp : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        _hpImage.fillAmount -= 0.01f;
+        _hpImage.fillAmount -= 1/(_hpCount+1);// 1/ÇÇ
         _hpCount--;
         Destroy(collision.gameObject);
 

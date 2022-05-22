@@ -1427,7 +1427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hpImage: {fileID: 0}
-  _hpScale: 100
+  _hpCount: 5
 --- !u!50 &1186740883
 Rigidbody2D:
   serializedVersion: 4

@@ -13,6 +13,26 @@ public class ButtonManager : MonoBehaviour
         
     }
 
+
+
+
+
+
+    public void Menu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
+    public void Shop()
+    {
+        SceneManager.LoadScene("Shop");
+    }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene("Stage_1");
+    }
+
     public void Restart()
     {
         SceneManager.LoadScene("Stage_1");
