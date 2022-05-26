@@ -9,11 +9,6 @@ public class Bullet : MonoBehaviour
 
     public GameObject _bullet;
 
-    private void Awake()
-    {
-        
-    }
-
     private void Start()
     {
         StartCoroutine("FireDelay");

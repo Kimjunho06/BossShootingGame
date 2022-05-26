@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class BossPattern : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject BossBullet;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        StartCoroutine("FireDelay");
+    }
+    
+    IEnumerator FireDelay()
+    {
+        while (true)
+        {
+            Instantiate(BossBullet, transform.position, Quaternion.identity);
+            yield return new WaitForSeconds(0.5f);
+        }
     }
 }
