@@ -8,10 +8,12 @@ using UnityEngine.UI;
 public class BossHp : MonoBehaviour
 {
     [SerializeField] private Image _hpImage = null;
-    [SerializeField] private float _hpCount = 100;
+    [SerializeField] private float _hpCount;
+    [SerializeField] private float _maxHp = 10;
 
     private void Awake()
     {
+        _hpCount = _maxHp;
         _hpImage = GameObject.Find("Canvas/HpImage").GetComponent<Image>();
     }
 
@@ -22,7 +24,7 @@ public class BossHp : MonoBehaviour
 
     private void BossDie()
     {
-        if (_hpCount == 0)
+        if (_hpCount <= 0)
         {
             SceneManager.LoadScene("GameOver");
         }
@@ -30,7 +32,7 @@ public class BossHp : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        _hpImage.fillAmount -= 1/(_hpCount+1);// 1/ÇÇ
+        _hpImage.fillAmount -= 1/_maxHp;
         _hpCount--;
         Destroy(collision.gameObject);
 

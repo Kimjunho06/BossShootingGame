@@ -18,7 +18,7 @@ public class Bullet : MonoBehaviour
     {
         while (true)
         {
-            _randomFire = Random.Range(0, 1f);
+            _randomFire = Random.Range(0.5f, 1.5f);
             Instantiate(_bullet, transform.position, Quaternion.identity);
             yield return new WaitForSeconds(_randomFire);
         }
