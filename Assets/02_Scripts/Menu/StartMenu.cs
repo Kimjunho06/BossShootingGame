@@ -9,6 +9,7 @@ public class StartMenu : MonoBehaviour
 {
     [SerializeField] private RectTransform _rectTrm;
 
+    
     private void Awake()
     {
         _rectTrm = GetComponent<RectTransform>();
@@ -16,17 +17,10 @@ public class StartMenu : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            SelectModeOpen();
-        }
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            SelectModeClose();
-        }
+        
     }
 
-    private void SelectModeClose()
+    public void SelectModeClose()
     {
         Sequence seq = DOTween.Sequence();
         seq.Append(_rectTrm.DOAnchorPos(Vector2.zero + new Vector2(0, 1200f), 0.3f));
