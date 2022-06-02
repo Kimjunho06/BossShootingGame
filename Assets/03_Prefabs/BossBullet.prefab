@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 6895005080150662886}
   - component: {fileID: 282680271751345140}
   - component: {fileID: 4531978019633314603}
-  m_Layer: 0
+  - component: {fileID: 2327592451922590146}
+  m_Layer: 9
   m_Name: BossBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,3 +98,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _MoveSpeed: 5
   Movedirection: {x: -1, y: 0, z: 0}
+--- !u!58 &2327592451922590146
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8563421267579911625}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.020648688}
+  serializedVersion: 2
+  m_Radius: 0.47935134

@@ -14,7 +14,7 @@ public class BossHp : MonoBehaviour
     private void Awake()
     {
         _hpCount = _maxHp;
-        _hpImage = GameObject.Find("Canvas/HpImage").GetComponent<Image>();
+        _hpImage = GameObject.Find("Canvas/BossHpImage").GetComponent<Image>();
     }
 
     private void Update()
@@ -32,10 +32,12 @@ public class BossHp : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        _hpImage.fillAmount -= 1/_maxHp;
-        _hpCount--;
-        Destroy(collision.gameObject);
-
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            _hpImage.fillAmount -= 1/_hpCount;
+            _hpCount--;
+            Destroy(collision.gameObject);
+        }
     }
 
 

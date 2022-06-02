@@ -19,8 +19,8 @@ EditorBuildSettings:
     guid: 96ca6c7d4e417624791a27958ad903bd
   - enabled: 1
     path: Assets/01_Scenes/ModeScene/BossMode_1.unity
-    guid: ab127557d2117c14e993319e0b14832e
+    guid: 4d82f0aba40d38b45a015b8bb03036d1
   - enabled: 1
     path: Assets/01_Scenes/ModeScene/MultiplayMode_1.unity
-    guid: 993920749cfdebf4d8d7bc515adf57a2
+    guid: fbad00457fa53654baa93bd431e006f2
   m_configObjects: {}
