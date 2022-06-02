@@ -7,14 +7,14 @@ using UnityEngine.UI;
 
 public class BossHp : MonoBehaviour
 {
-    [SerializeField] private Image _hpImage = null;
-    [SerializeField] private float _hpCount;
-    [SerializeField] private float _maxHp = 10;
+    [SerializeField] private Image _bossHpImage = null;
+    [SerializeField] private float _bossHpCount;
+    [SerializeField] private float _bossMaxHp = 10;
 
     private void Awake()
     {
-        _hpCount = _maxHp;
-        _hpImage = GameObject.Find("Canvas/BossHpImage").GetComponent<Image>();
+        _bossHpCount = _bossMaxHp;
+        _bossHpImage = GameObject.Find("Canvas/BossHpImage").GetComponent<Image>();
     }
 
     private void Update()
@@ -24,7 +24,7 @@ public class BossHp : MonoBehaviour
 
     private void BossDie()
     {
-        if (_hpCount <= 0)
+        if (_bossHpCount <= 0)
         {
             SceneManager.LoadScene("GameOver");
         }
@@ -34,8 +34,8 @@ public class BossHp : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
-            _hpImage.fillAmount -= 1/_hpCount;
-            _hpCount--;
+            _bossHpImage.fillAmount -= 1/_bossMaxHp;
+            _bossHpCount--;
             Destroy(collision.gameObject);
         }
     }

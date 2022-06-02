@@ -9,12 +9,23 @@ public class ButtonManager : MonoBehaviour
 {
 
     StartMenu _startMenu;
-    
+    HelpButton _helpButton;
     
     private void Awake()
     {   
         _startMenu = GameObject.Find("ModeSelectBgr").GetComponent<StartMenu>();
+        _helpButton = GameObject.Find("HelpBgr").GetComponent<HelpButton>();
     }
+
+    public void HelpO()
+    {
+        _helpButton.OpenHelp();
+    }
+    public void HelpC()
+    {
+        _helpButton.CloseHelp();
+    }
+
 
     public void SelectModeO()
     {
@@ -24,6 +35,8 @@ public class ButtonManager : MonoBehaviour
     {
         _startMenu.SelectModeClose();
     }
+
+
 
 
 

@@ -635,14 +635,14 @@ GameObject:
   m_Component:
   - component: {fileID: 247478940}
   - component: {fileID: 247478939}
-  - component: {fileID: 247478941}
   - component: {fileID: 247478942}
   - component: {fileID: 247478943}
   - component: {fileID: 247478944}
-  - component: {fileID: 247478945}
   - component: {fileID: 247478946}
+  - component: {fileID: 247478941}
+  - component: {fileID: 247478945}
   m_Layer: 7
-  m_Name: Player_AI
+  m_Name: Player_Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -709,7 +709,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.23, y: -0.1, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
-  m_Children: []
+  m_Children:
+  - {fileID: 403741587}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -722,11 +723,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 247478938}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48e421f460c9a01489a5d4fe6ea9b97c, type: 3}
+  m_Script: {fileID: 11500000, guid: e35f762905213c64c88e21fc5aa4ccd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 0
-  _moveTrmDelaySecond: 2
+  _playerSpeed: 5
 --- !u!114 &247478942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -752,7 +752,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 427dcaf8efbc6244bb74af56fd0c1b80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerHp: 10
+  _playerHpCount: 10
+  _playerMaxHp: 10
+  _playerHpImage: {fileID: 0}
 --- !u!58 &247478944
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -769,19 +771,25 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.7
---- !u!114 &247478945
-MonoBehaviour:
+--- !u!95 &247478945
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 247478938}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 427dcaf8efbc6244bb74af56fd0c1b80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerHp: 10
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e176dfa82c2943a4991fff514b66f2b0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!50 &247478946
 Rigidbody2D:
   serializedVersion: 4
@@ -865,8 +873,8 @@ RectTransform:
   m_Children:
   - {fileID: 985827057}
   - {fileID: 629084167}
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 247478940}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1310,8 +1318,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 0626b924325d1c34cafa6b22297f4e4f, type: 3}
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
@@ -1455,7 +1463,7 @@ GameObject:
   - component: {fileID: 1186740884}
   - component: {fileID: 1186740883}
   m_Layer: 6
-  m_Name: Boss_Player
+  m_Name: Boss_AI
   m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

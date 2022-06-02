@@ -2,41 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using System;
 
 public class PlayerMove : MonoBehaviour
 {
-    [SerializeField] private float _moveSpeed = 5f; // 아직 안 씀
-    [SerializeField] private float _moveTrmDelaySecond;
-
-    private Sequence _moveSequence;
-    
-    private float _randomTransX;
-    private float _randomTransY;
-
+    [SerializeField] private float _playerSpeed = 5f;
 
     private void Update()
     {
-        Move();
+        MovePlayer();
     }
 
-    private void Start()
-    {
-        StartCoroutine("MoveTransDelay");
-    }
-
-    
-    IEnumerator MoveTransDelay()
-    {
-        _randomTransX = Random.Range(-8.5f, 0f);
-        _randomTransY = Random.Range(-3f, 3.8f);
-        _moveTrmDelaySecond = Random.Range(1f, 2f);
-        yield return new WaitForSecondsRealtime(_moveTrmDelaySecond);
-        StartCoroutine("MoveTransDelay");
-    }
-
-    private void Move()
-    {
-        _moveSequence = DOTween.Sequence().SetAutoKill(false)
-            .Append(transform.DOMove(new Vector3(_randomTransX, _randomTransY, 0), 0.5f)).SetEase(Ease.InOutSine);
+    private void MovePlayer()
+    {   //W A S D 이동 막기 위함
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            transform.position += Vector3.right * _playerSpeed * Time.deltaTime;
+        }
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            transform.position += Vector3.left * _playerSpeed * Time.deltaTime;
+        }
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            transform.position += Vector3.down * _playerSpeed * Time.deltaTime;
+        }
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            transform.position += Vector3.up * _playerSpeed * Time.deltaTime;
+        }
     }
 }
