@@ -15,19 +15,19 @@ public class PlayerMove : MonoBehaviour
 
     private void MovePlayer()
     {   //W A S D 이동 막기 위함
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow) && transform.position.x < 9f)
         {
             transform.position += Vector3.right * _playerSpeed * Time.deltaTime;
         }
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow) && transform.position.x > -9f)
         {
             transform.position += Vector3.left * _playerSpeed * Time.deltaTime;
         }
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.DownArrow) && transform.position.y > -3.4f)
         {
             transform.position += Vector3.down * _playerSpeed * Time.deltaTime;
         }
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.UpArrow) && transform.position.y < 5f)
         {
             transform.position += Vector3.up * _playerSpeed * Time.deltaTime;
         }
