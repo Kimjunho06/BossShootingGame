@@ -4,18 +4,30 @@ using UnityEngine;
 
 public class BossPattern : MonoBehaviour
 {
-    public GameObject BossBullet;
+    [SerializeField] private GameObject _bossBullet;
+
+    private void Awake()
+    {
+
+    }
 
     private void Start()
     {
         StartCoroutine("FireDelay");
     }
-    
+
+
+    private void Update()
+    {
+        
+    }
+
+
     IEnumerator FireDelay()
     {
         while (true)
         {
-            Instantiate(BossBullet, transform.position, Quaternion.identity);
+            Instantiate(_bossBullet, transform.position, Quaternion.identity);
             yield return new WaitForSeconds(0.5f);
         }
     }

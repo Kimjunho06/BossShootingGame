@@ -15,11 +15,11 @@ public class PlayerMove : MonoBehaviour
 
     private void MovePlayer()
     {   //W A S D 이동 막기 위함
-        if (Input.GetKey(KeyCode.RightArrow) && transform.position.x < 9f)
+        if (Input.GetKey(KeyCode.RightArrow) && transform.position.x < 11f)
         {
             transform.position += Vector3.right * _playerSpeed * Time.deltaTime;
         }
-        if (Input.GetKey(KeyCode.LeftArrow) && transform.position.x > -9f)
+        if (Input.GetKey(KeyCode.LeftArrow) && transform.position.x > -11f)
         {
             transform.position += Vector3.left * _playerSpeed * Time.deltaTime;
         }

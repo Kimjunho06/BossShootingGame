@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6895005080150662886}
   - component: {fileID: 282680271751345140}
-  - component: {fileID: 4531978019633314603}
   - component: {fileID: 2327592451922590146}
+  - component: {fileID: 2198552022596790991}
   m_Layer: 9
   m_Name: BossBullet
   m_TagString: BossBullet
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8563421267579911625}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.3253555, y: -1.1189144, z: 0}
+  m_LocalPosition: {x: -2.7905552, y: -10.529106, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300126, guid: 142ff8784e552734f9d6a895491d0ae8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 56c7c2feb29601e4689bd1a885d55cd5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -84,20 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4531978019633314603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8563421267579911625}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3839000f83e897849bb41b4ba841fea5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _MoveSpeed: 5
-  Movedirection: {x: -1, y: 0, z: 0}
 --- !u!58 &2327592451922590146
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -111,6 +97,20 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.020648688}
+  m_Offset: {x: 0, y: -0.006816089}
   serializedVersion: 2
-  m_Radius: 0.47935134
+  m_Radius: 0.360391
+--- !u!114 &2198552022596790991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8563421267579911625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3839000f83e897849bb41b4ba841fea5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _MoveSpeed: 5
+  Movedirection: {x: -1, y: 0, z: 0}
