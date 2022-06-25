@@ -7,14 +7,9 @@ using UnityEngine.Events;
 
 public class ButtonManager : MonoBehaviour
 {
-
-    StartMenu _startMenu;
     HelpButton _helpButton;
     
-    private void Awake()
-    {   
-        _startMenu = GameObject.Find("ModeSelectBgr").GetComponent<StartMenu>();
-    }
+    
 
     public void HelpO()
     {
@@ -26,18 +21,6 @@ public class ButtonManager : MonoBehaviour
         _helpButton = GameObject.Find("HelpBgr").GetComponent<HelpButton>();
         _helpButton.CloseHelp();
     }
-
-
-    public void SelectModeO()
-    {
-        _startMenu.SelectModeOpen();
-    }
-    public void SelectModeC()
-    {
-        _startMenu.SelectModeClose();
-    }
-
-
 
 
 

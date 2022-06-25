@@ -11,6 +11,8 @@ public class BossHp : MonoBehaviour
     [SerializeField] private float _bossHpCount;
     [SerializeField] private float _bossMaxHp = 10;
 
+    public GameObject _bullet;
+
     private void Awake()
     {
         _bossHpCount = _bossMaxHp;
@@ -36,7 +38,7 @@ public class BossHp : MonoBehaviour
         {
             _bossHpImage.fillAmount -= 1/_bossMaxHp;
             _bossHpCount--;
-            Destroy(collision.gameObject);
+            PoolManager.Instance.Push(collision.gameObject);
         }
     }
 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6895005080150662886}
   - component: {fileID: 282680271751345140}
   - component: {fileID: 2327592451922590146}
-  - component: {fileID: 2198552022596790991}
+  - component: {fileID: 1724236621739960631}
   m_Layer: 9
   m_Name: BossBullet
   m_TagString: BossBullet
@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8563421267579911625}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.7905552, y: -10.529106, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalPosition: {x: -327.31747, y: -21.965796, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -97,10 +97,10 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.006816089}
+  m_Offset: {x: 0, y: -0.010864496}
   serializedVersion: 2
-  m_Radius: 0.360391
---- !u!114 &2198552022596790991
+  m_Radius: 0.283471
+--- !u!114 &1724236621739960631
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,8 +109,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 8563421267579911625}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3839000f83e897849bb41b4ba841fea5, type: 3}
+  m_Script: {fileID: 11500000, guid: f5dbdaf8f13b0864cafa0a26130c689f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _MoveSpeed: 5
-  Movedirection: {x: -1, y: 0, z: 0}
+  _player: {fileID: 0}
+  _bulletSpeed: 1
