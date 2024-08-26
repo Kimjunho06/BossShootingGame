@@ -6,5 +6,5 @@
 
 
 <div align="center">
-  <img src="[https://example.com/image.png](https://github.com/user-attachments/assets/7026bcea-6567-4fad-a0ee-f9862ded87a7)">
+  ![image](https://github.com/user-attachments/assets/4f288d88-23c9-4ad0-a133-32ab75c7e46e)
 </div>
