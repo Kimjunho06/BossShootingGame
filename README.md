@@ -4,7 +4,6 @@
     </h1>
 </div>
 
-
 <div align="center">
-  ![image](https://github.com/user-attachments/assets/4f288d88-23c9-4ad0-a133-32ab75c7e46e)
+  <img src=![image](https://github.com/user-attachments/assets/4f288d88-23c9-4ad0-a133-32ab75c7e46e) alt="이미지 설명" width="300" height="300">
 </div>
