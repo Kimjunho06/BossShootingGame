@@ -1,4 +1,8 @@
-<div align="center"> **Test** </div>
+<div align="center">
+    <h1>
+      게임 소개 
+    </h1>
+</div>
 
 
 
